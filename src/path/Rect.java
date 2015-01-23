@@ -43,7 +43,8 @@ public class Rect implements Shape {
 
     @Override
     public boolean isInside(int x, int y) {
-        throw new UnsupportedOperationException();
+        x-=this.x; y -= this.y;
+        return x >= 0 && y >= 0 && x < w && y < h;
     }
     
     

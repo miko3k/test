@@ -14,6 +14,24 @@ import java.util.BitSet;
 public class Bitmap {
     final BitSet bits;
     final int x,y,w,h;
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getW() {
+        return w;
+    }
+
+    public int getH() {
+        return h;
+    }
+    
+    
     
     public Bitmap(int x, int y, int w, int h) {
         this.bits = new BitSet(w*h);
