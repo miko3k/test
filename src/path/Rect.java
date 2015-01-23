@@ -9,7 +9,7 @@ package path;
  *
  * @author miko
  */
-public class Rect implements Shape {
+final public class Rect implements Shape {
     final int x, y;
     final int w, h;
 

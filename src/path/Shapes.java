@@ -10,9 +10,9 @@ package path;
  * @author miko
  */
 public class Shapes {
-    public static Bitmap toBitmap(Shape shape) {
+    public static BitmapShape toBitmap(Shape shape) {
         Rect rc = shape.getBoundingRect();
-        Bitmap result = new Bitmap(rc.getX(), rc.getY(), rc.getW(), rc.getH());
+        BitmapShape result = new BitmapShape(rc.getX(), rc.getY(), rc.getW(), rc.getH());
         int x1 = rc.getX();
         int y1 = rc.getY();
         int x2 = x1 + rc.getW();

@@ -9,7 +9,7 @@ package path;
  *
  * @author miko
  */
-public interface EffectAreaSpec {
+public interface Spec {
     public boolean isBlocking(int x, int y);
     public void affect(int x, int y, float strength);
 }

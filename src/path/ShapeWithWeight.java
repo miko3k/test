@@ -9,6 +9,12 @@ package path;
  *
  * @author miko
  */
-public interface ShapeWithStrength extends Shape {
+public interface ShapeWithWeight extends Shape {
+    /**
+     * 
+     * @param x x-coordinate
+     * @param y y-coordinate
+     * @return value 0 to 1 inclusive, undefined for points outside of shape
+     */
     float getStrength(int x, int y);
 }

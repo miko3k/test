@@ -11,7 +11,7 @@ import java.util.BitSet;
  *
  * @author miko
  */
-public class Bitmap {
+public class BitmapShape implements Shape {
     final BitSet bits;
     final int x,y,w,h;
 
@@ -33,7 +33,7 @@ public class Bitmap {
     
     
     
-    public Bitmap(int x, int y, int w, int h) {
+    public BitmapShape(int x, int y, int w, int h) {
         this.bits = new BitSet(w*h);
         this.x = x;
         this.y = y;
@@ -55,5 +55,15 @@ public class Bitmap {
         if(x < 0 || y < 0 || x >= w || y >= h) throw new IllegalArgumentException(x + "," + y);
         
         bits.set(y*w+x, val);
+    }
+
+    @Override
+    public Rect getBoundingRect() {
+        return new Rect(x, y, w, h);
+    }
+
+    @Override
+    public boolean isInside(int x, int y) {
+        return get(x,y);
     }
 }
